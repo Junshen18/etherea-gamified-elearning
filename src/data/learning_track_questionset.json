@@ -1,0 +1,246 @@
+{
+    "questions": [
+      {
+        "track": "Core Protocol",
+        "question": "Ethereum transitioned from _______ to Proof of Stake during the Merge.",
+        "correct_answer": "Proof of Work",
+        "wrong_answer": "Proof of Transaction"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "The smallest unit of ETH is called _______.",
+        "correct_answer": "Wei",
+        "wrong_answer": "Gwei"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Ethereum's virtual machine, known as _______, processes smart contracts.",
+        "correct_answer": "Ethereum Virtual Machine (EVM)",
+        "wrong_answer": "Ethereum Machine Code (EMC)"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Gas fees are paid in the cryptocurrency _______.",
+        "correct_answer": "Ether (ETH)",
+        "wrong_answer": "Bitcoin (BTC)"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Validators are required to stake at least _______ ETH to participate in Ethereum’s Proof of Stake.",
+        "correct_answer": "32",
+        "wrong_answer": "64"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "The cypherpunk movement aims to achieve _______ through cryptography.",
+        "correct_answer": "Privacy",
+        "wrong_answer": "Transparency"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "Zero-knowledge proof systems like _______ are used to enhance transaction privacy in Ethereum.",
+        "correct_answer": "zk-SNARKs",
+        "wrong_answer": "zk-SHIELDs"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "A protocol enabling private Ethereum transactions is called _______.",
+        "correct_answer": "Tornado Cash",
+        "wrong_answer": "Cyclone Cash"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "The use of _______ prevents replay attacks on Ethereum transactions.",
+        "correct_answer": "Nonces",
+        "wrong_answer": "Timestamps"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "Cypherpunks advocate for the use of _______ to resist censorship and surveillance.",
+        "correct_answer": "Decentralized systems",
+        "wrong_answer": "Centralized systems"
+      },
+      {
+        "track": "Usability",
+        "question": "Ethereum’s human-readable address system is called _______.",
+        "correct_answer": "Ethereum Name Service (ENS)",
+        "wrong_answer": "Ethereum Address Converter (EAC)"
+      },
+      {
+        "track": "Usability",
+        "question": "_______ wallets allow users to recover their accounts without remembering their seed phrase.",
+        "correct_answer": "Social recovery",
+        "wrong_answer": "Multi-signature"
+      },
+      {
+        "track": "Usability",
+        "question": "A user-friendly interface for interacting with Ethereum dApps is provided by the _______ wallet.",
+        "correct_answer": "MetaMask",
+        "wrong_answer": "MyCrypto"
+      },
+      {
+        "track": "Usability",
+        "question": "High _______ fees are a common usability challenge in Ethereum.",
+        "correct_answer": "Gas",
+        "wrong_answer": "Token"
+      },
+      {
+        "track": "Usability",
+        "question": "An Ethereum wallet stores private keys and allows users to sign _______.",
+        "correct_answer": "Transactions",
+        "wrong_answer": "Blocks"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "The _______ mechanism burns a portion of transaction fees to make ETH potentially deflationary.",
+        "correct_answer": "EIP-1559",
+        "wrong_answer": "EIP-1011"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "In Proof of Stake, validators risk losing funds through _______ for dishonest behavior.",
+        "correct_answer": "Slashing",
+        "wrong_answer": "Downtime"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "Ethereum uses _______ fees to prevent spam transactions on the network.",
+        "correct_answer": "Gas",
+        "wrong_answer": "Node"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "_______ is the total reward earned by validators for adding a block to the Ethereum blockchain.",
+        "correct_answer": "Block reward",
+        "wrong_answer": "Miner fee"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "MEV stands for _______ Extractable Value.",
+        "correct_answer": "Miner/Maximal",
+        "wrong_answer": "Median/Maximum"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Ethereum transitioned from _______ to Proof of Stake during the Merge.",
+        "correct_answer": "Proof of Work",
+        "wrong_answer": "Proof of Transaction"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "The smallest unit of ETH is called _______.",
+        "correct_answer": "Wei",
+        "wrong_answer": "Gwei"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Ethereum's virtual machine, known as _______, processes smart contracts.",
+        "correct_answer": "Ethereum Virtual Machine (EVM)",
+        "wrong_answer": "Ethereum Machine Code (EMC)"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Gas fees are paid in the cryptocurrency _______.",
+        "correct_answer": "Ether (ETH)",
+        "wrong_answer": "Bitcoin (BTC)"
+      },
+      {
+        "track": "Core Protocol",
+        "question": "Validators are required to stake at least _______ ETH to participate in Ethereum’s Proof of Stake.",
+        "correct_answer": "32",
+        "wrong_answer": "64"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "The cypherpunk movement aims to achieve _______ through cryptography.",
+        "correct_answer": "Privacy",
+        "wrong_answer": "Transparency"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "Zero-knowledge proof systems like _______ are used to enhance transaction privacy in Ethereum.",
+        "correct_answer": "zk-SNARKs",
+        "wrong_answer": "zk-SHIELDs"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "A protocol enabling private Ethereum transactions is called _______.",
+        "correct_answer": "Tornado Cash",
+        "wrong_answer": "Cyclone Cash"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "The use of _______ prevents replay attacks on Ethereum transactions.",
+        "correct_answer": "Nonces",
+        "wrong_answer": "Timestamps"
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "question": "Cypherpunks advocate for the use of _______ to resist censorship and surveillance.",
+        "correct_answer": "Decentralized systems",
+        "wrong_answer": "Centralized systems"
+      },
+      {
+        "track": "Usability",
+        "question": "Ethereum’s human-readable address system is called _______.",
+        "correct_answer": "Ethereum Name Service (ENS)",
+        "wrong_answer": "Ethereum Address Converter (EAC)"
+      },
+      {
+        "track": "Usability",
+        "question": "_______ wallets allow users to recover their accounts without remembering their seed phrase.",
+        "correct_answer": "Social recovery",
+        "wrong_answer": "Multi-signature"
+      },
+      {
+        "track": "Usability",
+        "question": "A user-friendly interface for interacting with Ethereum dApps is provided by the _______ wallet.",
+        "correct_answer": "MetaMask",
+        "wrong_answer": "MyCrypto"
+      },
+      {
+        "track": "Usability",
+        "question": "High _______ fees are a common usability challenge in Ethereum.",
+        "correct_answer": "Gas",
+        "wrong_answer": "Token"
+      },
+      {
+        "track": "Usability",
+        "question": "An Ethereum wallet stores private keys and allows users to sign _______.",
+        "correct_answer": "Transactions",
+        "wrong_answer": "Blocks"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "The _______ mechanism burns a portion of transaction fees to make ETH potentially deflationary.",
+        "correct_answer": "EIP-1559",
+        "wrong_answer": "EIP-1011"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "In Proof of Stake, validators risk losing funds through _______ for dishonest behavior.",
+        "correct_answer": "Slashing",
+        "wrong_answer": "Downtime"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "Ethereum uses _______ fees to prevent spam transactions on the network.",
+        "correct_answer": "Gas",
+        "wrong_answer": "Node"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "_______ is the total reward earned by validators for adding a block to the Ethereum blockchain.",
+        "correct_answer": "Block reward",
+        "wrong_answer": "Miner fee"
+      },
+      {
+        "track": "Cryptoeconomics",
+        "question": "MEV stands for _______ Extractable Value.",
+        "correct_answer": "Miner/Maximal",
+        "wrong_answer": "Median/Maximum"
+      }
+    ]
+}
+      
+  

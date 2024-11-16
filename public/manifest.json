@@ -1,0 +1,16 @@
+{
+    "short_name": "Etherea",
+    "name": "Etherea - Enter the Web 3 Space",
+    "description": "A Gamified Learning Platform for the Web 3 Space",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "/token-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }

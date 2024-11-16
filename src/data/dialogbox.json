@@ -1,0 +1,85 @@
+{
+    "popups": [
+      {
+        "track": "Core Protocol",
+        "message": "Did you know? Ethereum transitioned from Proof of Work to Proof of Stake during the Merge to become more energy-efficient!"
+      },
+      {
+        "track": "Core Protocol",
+        "message": "Fun fact: The smallest unit of ETH is called 'Wei', named after Wei Dai, a pioneer of cryptocurrency concepts."
+      },
+      {
+        "track": "Core Protocol",
+        "message": "Remember: The Ethereum Virtual Machine (EVM) is what processes smart contracts on the Ethereum network."
+      },
+      {
+        "track": "Core Protocol",
+        "message": "Keep in mind: Gas fees on Ethereum are always paid using Ether (ETH)."
+      },
+      {
+        "track": "Core Protocol",
+        "message": "Validator trivia: To participate in Ethereum's Proof of Stake, you need to stake at least 32 ETH."
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "message": "Cypherpunk vision: This movement focuses on achieving privacy through cryptography."
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "message": "Zero-knowledge fun: zk-SNARKs are used in Ethereum to enhance privacy while maintaining security."
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "message": "Did you know? Tornado Cash is a protocol enabling private Ethereum transactions."
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "message": "Tech fact: Nonces are used in Ethereum to prevent replay attacks and ensure transaction uniqueness."
+      },
+      {
+        "track": "Cypherpunk and Privacy",
+        "message": "Cypherpunk principle: Decentralized systems are key to resisting censorship and surveillance."
+      },
+      {
+        "track": "Usability",
+        "message": "Ethereum Name Service (ENS) makes addresses human-readable, improving usability and reducing errors."
+      },
+      {
+        "track": "Usability",
+        "message": "Did you know? Social recovery wallets allow you to regain access without needing your seed phrase."
+      },
+      {
+        "track": "Usability",
+        "message": "MetaMask is one of the most user-friendly wallets for interacting with Ethereum dApps!"
+      },
+      {
+        "track": "Usability",
+        "message": "A challenge: High gas fees remain one of Ethereum's biggest usability hurdles."
+      },
+      {
+        "track": "Usability",
+        "message": "Ethereum wallets store private keys, enabling users to sign transactions securely."
+      },
+      {
+        "track": "Cryptoeconomics",
+        "message": "Interesting feature: EIP-1559 burns part of the transaction fees, potentially making ETH deflationary."
+      },
+      {
+        "track": "Cryptoeconomics",
+        "message": "Validator penalties: In Proof of Stake, validators can lose funds through slashing for dishonest behavior."
+      },
+      {
+        "track": "Cryptoeconomics",
+        "message": "Gas fees play a crucial role in preventing spam transactions on the Ethereum network."
+      },
+      {
+        "track": "Cryptoeconomics",
+        "message": "Remember: Validators earn block rewards for successfully adding a block to the Ethereum blockchain."
+      },
+      {
+        "track": "Cryptoeconomics",
+        "message": "MEV stands for Miner/Maximal Extractable Value—profits extracted from transaction ordering in a block."
+      }
+    ]
+  }
+  
