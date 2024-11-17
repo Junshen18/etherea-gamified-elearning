@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import {
@@ -11,11 +11,11 @@ import Image from "next/image";
 import WorldIDVerification from "@/components/WorldIDVerification";
 
 export default function Profile() {
-  const router = useRouter();
+
   const [isCopied, setIsCopied] = useState(false);
   const { setShowDynamicUserProfile } = useDynamicContext();
   // Example wallet address - replace with actual user's wallet
-  const walletAddress = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+  const walletAddress = localStorage.getItem("user_address") ?? "0x000000000000000000000000000000000000000";
   const shortAddress = `${walletAddress.slice(0, 6)}...${walletAddress.slice(
     -4
   )}`;

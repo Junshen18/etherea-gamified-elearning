@@ -11,14 +11,13 @@ import { faForward} from '@fortawesome/free-solid-svg-icons'
 import NotificationModel from "@/components/notification-model";
 import RewardPanel from "@/components/reward-panel";
 import { useRouter } from "next/navigation";
-import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+;
 
 
 export default function Start() {
   const [count, setCount] = useState(0);
   const router = useRouter();
 
-  const { user } = useDynamicContext();
 
   const handleClick = () => {
     setCount(count + 1);
@@ -33,7 +32,7 @@ export default function Start() {
   // const [userName, setUserName] = useState("");
   const [isNotificationOpen, setIsNotificationOpen] = useState(true);
   const [showRewards, setShowRewards] = useState(false);
-
+  const user_address = localStorage.getItem("user_address");
   const rewardsExample = [
     // { type: "exp" as const, amount: 100 },
     // { type: "coin" as const, amount: 50 },
@@ -185,7 +184,7 @@ export default function Start() {
               <div className="font-bold text-xl">Sage</div>
               <TypeAnimation
                 sequence={[
-                  `Well met, ${user?.firstName}. From this moment, you are a Seeker of Truth and Freedom. I will walk alongside you, teaching, guiding, and answering your questions as we navigate Etherea together.`,
+                  `Well met, ${user_address}. From this moment, you are a Seeker of Truth and Freedom. I will walk alongside you, teaching, guiding, and answering your questions as we navigate Etherea together.`,
                 ]}
                 wrapper="span"
                 speed={90}

@@ -33,15 +33,15 @@ export default function WorldIDVerification() {
 
   return (
     <IDKitWidget
-      app_id="app_staging_ef753df76f3729f0f548c0dcb1ac96f4"
-      action="testing-action"
+      app_id="app_280a887139487136d1ab578475a8130e"
+      action="verify-action"
       onSuccess={onSuccess}
       handleVerify={handleVerify}
       verification_level={VerificationLevel.Device}
     >
       {({ open }) => 
-        <div className=" relative flex flex-col items-center justify-center bg-white rounded-lg p-4">
-            <p key="world-id-button" onClick={open}>Unverified with World ID</p>
+        <div className=" relative flex flex-col items-center justify-center bg-white rounded-lg p-4 cursor-pointer">
+            <p key="world-id-button" className="font-semibold" onClick={open}>Unverified with World ID</p>
             <Image src="/worldID.svg" alt="Worldcoin" width={40} height={40} className="absolute opacity-15"/>
         </div>
       }

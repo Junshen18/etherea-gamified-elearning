@@ -62,7 +62,12 @@ export function LayoutProvider({ children }: { children: React.ReactNode }) {
                 const authToken = getAuthToken();
                 console.log('authToken', authToken);
                 localStorage.setItem("isAuthenticated", "true");
-                router.push("/authenticated-pages/home");
+                localStorage.setItem("user_address", args.user.verifiedCredentials[0].address ?? "");
+                if(args.user.newUser == true) {
+                  router.push("/register");
+                } else {
+                  router.push("/authenticated-pages/home");
+                }
             },
             onLogout: (args) => {
                 console.log('onLogout was called', args);
