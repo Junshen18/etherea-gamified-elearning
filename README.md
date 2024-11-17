@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Etherea: Gamified E-Learning Platform for Blockchain & Web3
+Etherea is an innovative e-learning platform designed to make learning blockchain and Web3 technology engaging, interactive, and rewarding. Through the integration of gamification, Etherea turns complex topics into an exciting journey, empowering users with knowledge while rewarding their efforts with real-value tokens and achievements.
 
-## Getting Started
+🚀 Features
+🌟 Gamified Learning
+Mini-Games: Practice blockchain and Web3 concepts with interactive games.
+Rewards System: Earn coins and experience points (EXP) by completing tasks and quizzes.
+NFT Achievements: Receive unique NFTs as proof of completing chapters.
 
-First, run the development server:
+🎮 Role-Playing Elements
+Start with an NFT avatar with customizable attributes (strength, health, defense).
+Level up your avatar by gaining EXP and enhancing attributes of your choice.
+Compete on the leaderboard showcasing user levels and streaks.
 
+💡 Learn Blockchain and Web3
+Step-by-step guides on blockchain, cryptocurrencies, DeFi, smart contracts, and more.
+Masterclasses unlocked with in-platform currency (coins).
+
+🔒 Seamless User Experience
+Log in via email, Google, or traditional wallet methods.
+Auto-generated wallets for non-wallet users, ensuring ease of access.
+Secure storage of NFTs and earned tokens in user wallets.
+
+Deployed contract link:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+https://evm-testnet.flowscan.io/token/0x8f090d0598260041B5a583660F652139819338a0?tab=contract_code
+https://evm-testnet.flowscan.io/token/0x16B19bb1A48EAa7D045f9A834f3BB426294C9BdA?tab=contract_abi
+https://evm-testnet.flowscan.io/token/0x06f8A5f6f02a5C89e464c65DA24319fd67867d32?tab=contract_abi
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
