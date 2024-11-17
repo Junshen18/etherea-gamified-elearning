@@ -4,7 +4,6 @@ import { usePathname, useRouter } from "next/navigation";
 import BottomNav from "./bottom-nav";
 import {
   DynamicContextProvider,
-  DynamicEmbeddedWidget,
   DynamicWidget,
   getAuthToken,
 } from "@dynamic-labs/sdk-react-core";
@@ -82,7 +81,7 @@ export function LayoutProvider({ children }: { children: React.ReactNode }) {
         {isAuthPath ? (
           <div className="max-h-screen bg-[url('/EthereaMap.png')] bg-cover bg-center bg-no-repeat ">
             <div className="mx-auto max-w-[428px] max-h-screen h-full bg-primary relative flex flex-col">
-              <div className="overflow-y-scroll h-full">
+              <div className="overflow-y-scroll h-full relative">
                 {children}
               </div>
               {showNav && <BottomNav />}

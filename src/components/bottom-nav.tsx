@@ -5,8 +5,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { 
   Home, 
-  BookOpen, 
-  Trophy, 
+  BookOpen,  
   Rocket, 
   User,
   type LucideIcon
@@ -22,7 +21,7 @@ const navItems: NavItem[] = [
   { icon: Home, label: 'Home', href: '/authenticated-pages/home' },
   { icon: BookOpen, label: 'Learn', href: '/authenticated-pages/learn' },
   { icon: Rocket, label: 'Bootcamp', href: '/authenticated-pages/bootcamp' },
-  { icon: User, label: 'Profile', href: '/authenticated-pages/profile' },
+  { icon: User, label: 'Profile', href: '/authenticated-pages/profile' }
 ];
 
 const BottomNav = () => {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { DailyQuestModal } from '@/components/DailyQuestModal';
 import { useDailyQuests } from '@/components/daily-quests';
 
+
 interface TokenBalance {
   formatted: string;
   symbol: string;
@@ -16,6 +17,7 @@ export default function Home() {
   const [level, setLevel] = useState<number>(2);
   const [isQuestModalOpen, setIsQuestModalOpen] = useState(false);
   const { quests, updateProgress } = useDailyQuests();
+  const [streakCount, setStreakCount] = useState<number>(2);
 
   // Temporary mock data
   const tokenBalance: TokenBalance = {
@@ -28,10 +30,15 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-purple-900 text-white">
       <div className="container mx-auto px-8 py-8">
         <div className="flex flex-col items-center gap-8">
-          {/* Level Display */}
+          {/* Level Display with Streak */}
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-2">Level {level}</h1>
             <p className="text-gray-300">Adventure Awaits!</p>
+                        
+            <div className="mt-4 inline-flex items-center gap-2 bg-orange-500/20 px-4 py-2 rounded-full">
+              <span className="animate-bounce">🔥</span>
+              <span className="font-bold">{streakCount} Day Streak</span>
+            </div>
           </div>
 
           {/* Experience Bar */}

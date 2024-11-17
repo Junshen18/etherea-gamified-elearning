@@ -1,41 +1,102 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import QuizGame from '@/components/quiz-game';
+import { Play, X } from 'lucide-react';
+import Image from 'next/image';
 
-export default function Learn() {
-  const [selectedTopic, setSelectedTopic] = useState('Core Protocol');
+export default function LearnPage() {
+  const [selectedTrack, setSelectedTrack] = useState<string | null>(null);
+  const [showQuiz, setShowQuiz] = useState(false);
+
+  const tracks = [
+    { id: 1, name: 'Core Protocol' },
+    { id: 2, name: 'Cypherpunk and Privacy' },
+    { id: 3, name: 'Usability' },
+    { id: 4, name: 'Cryptoeconomics' },
+    { id: 5, name: 'Real World Ethereum' },
+    { id: 6, name: 'Security' },
+    { id: 7, name: 'Developer Experience' },
+    { id: 8, name: 'Layer 2' },
+    { id: 9, name: 'Coordination' },
+  ];
+
+  const handleTrackSelect = (track: string) => {
+    setSelectedTrack(track);
+  };
+
+  const handleStartQuiz = () => {
+    if (selectedTrack) {
+      setShowQuiz(true);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4 max-w-[428px] mx-auto">
-      {/* Top Stats Bar */}
-      <div className="mb-6">
-        <div className="bg-gray-800 p-3 rounded-lg border border-cyan-500/30 backdrop-blur-sm">
-          {/* Level and XP Row */}
-          <div className="flex items-center gap-2 mb-3">
-            <div className="flex flex-col">
-              <span className="text-cyan-400 text-xs">Current Level</span>
-              <span className="text-lg font-bold">Level 2</span>
-            </div>
-            <div className="flex-1">
-              <div className="w-full h-3 bg-gray-700 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
-                  style={{ width: '50%' }}
+    <div className="min-h-screen bg-slate-900 p-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">Learning Tracks</h1>
+
+        <div className="grid grid-cols-1 gap-4">
+          {tracks.map((track) => (
+            <motion.div
+              key={track.id}
+              className={`p-4 rounded-lg border ${selectedTrack === track.name
+                  ? 'border-cyan-500 bg-cyan-500/10'
+                  : 'border-slate-700 bg-slate-800/50'
+                }`}
+              onClick={() => handleTrackSelect(track.name)}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex flex-col items-center gap-4">
+                <Image
+                  src={`/${track.id}.jpeg`}
+                  alt={track.name}
+                  width={48}
+                  height={48}
+                  className="rounded object-cover"
                 />
+                <h2 className="text-lg font-semibold font-grotesk text-cyan-400">{track.name}</h2>
               </div>
-              <span className="text-xs text-cyan-400">5/10 XP</span>
-            </div>
-          </div>
-          
-          {/* Tokens Row */}
-          <div className="flex items-center gap-2">
-            <Image src="/token-icon.png" alt="Tokens" width={20} height={20} className="w-5 h-5" />
-            <span className="text-lg font-bold text-white">100</span>
-          </div>
+
+              {selectedTrack === track.name && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  className="mt-4 space-y-4"
+                >
+                  <div className="p-3 rounded bg-slate-800 border border-slate-700">
+                    <h3 className="text-cyan-400 font-mono mb-2">Basic</h3>
+                    <p className="text-slate-300 text-sm mb-4">
+                      Test your knowledge with a quick quiz challenge
+                    </p>
+                    <button
+                      onClick={handleStartQuiz}
+                      className="flex items-center gap-2 bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded
+                               hover:bg-cyan-500/30 transition-colors duration-300 font-mono text-sm"
+                    >
+                      <Play size={16} />
+                      Start Quiz
+                    </button>
+                  </div>
+
+                  <div className="p-3 rounded bg-slate-800 border border-slate-700 opacity-50">
+                    <h3 className="text-slate-400 font-mono mb-2">Advanced</h3>
+                    <p className="text-slate-500 text-sm">Coming soon...</p>
+                  </div>
+
+                  <div className="p-3 rounded bg-slate-800 border border-slate-700 opacity-50">
+                    <h3 className="text-slate-400 font-mono mb-2">Expert</h3>
+                    <p className="text-slate-500 text-sm">Coming soon...</p>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
-      
+
       {/* Topic Selector */}
       <div className="mb-6">
         <h2 className="text-lg font-bold mb-3">Choose Your Path</h2>
@@ -55,8 +116,8 @@ export default function Learn() {
                 key={index}
                 onClick={() => setSelectedTopic(topic.name)}
                 className={`px-4 py-2 rounded-full border border-cyan-500/30 backdrop-blur-sm
-                  ${index === 0 
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500' 
+                  ${index === 0
+                    ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500'
                     : 'bg-gray-800/50'
                   } 
                   hover:bg-gray-700/50 transition-all whitespace-nowrap flex items-center gap-2`}
@@ -69,60 +130,24 @@ export default function Learn() {
         </div>
       </div>
 
-      
 
-      {/* Learning Path */}
-      <div className="relative">
-        {/* Connection Lines */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <svg className="w-full h-full" style={{ position: 'absolute', zIndex: 0 }}>
-            <path 
-              d="M70 80 L180 160 M180 160 L70 240 M180 160 L290 240" 
-              stroke="rgb(75 85 99)"
-              strokeWidth="2"
-              fill="none"
+
+      {showQuiz && selectedTrack && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+          <div className="relative w-full max-w-4xl">
+            <button
+              onClick={() => setShowQuiz(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white z-50"
+            >
+              <X size={24} />
+            </button>
+            <QuizGame
+              track={selectedTrack}
+              onClose={() => setShowQuiz(false)}
             />
-          </svg>
-        </div>
-
-        {/* Stages */}
-        <div className="relative z-[1]">
-          {/* Stage 1 */}
-          <div className="absolute left-4 top-8 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-              <span className="text-xl font-bold">1</span>
-            </div>
-            <span className="mt-2 text-sm font-semibold">Basics</span>
-          </div>
-
-          {/* Stage 2 */}
-          <div className="absolute left-[160px] top-32 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500/80 to-blue-500/80 flex items-center justify-center cursor-not-allowed">
-              <span className="text-xl font-bold">2</span>
-            </div>
-            <span className="mt-2 text-sm font-semibold text-gray-400">Advanced</span>
-          </div>
-
-          {/* Stage 3A */}
-          <div className="absolute left-4 top-56 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center cursor-not-allowed">
-              <span className="text-xl font-bold">3A</span>
-            </div>
-            <span className="mt-2 text-sm font-semibold text-gray-400">Specialist</span>
-          </div>
-
-          {/* Stage 3B */}
-          <div className="absolute left-[280px] top-56 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center cursor-not-allowed">
-              <span className="text-xl font-bold">3B</span>
-            </div>
-            <span className="mt-2 text-sm font-semibold text-gray-400">Expert</span>
           </div>
         </div>
-
-        {/* Add height to container to account for absolute positioning */}
-        <div className="h-[400px]"></div>
-      </div>
+      )}
     </div>
   );
 }

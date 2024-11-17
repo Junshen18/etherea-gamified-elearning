@@ -22,6 +22,14 @@ export default function Bootcamp() {
       price: 100, 
       thumbnail: '/bootcamp.png',
     },
+    {
+      id: '2',
+      title: 'Web3 Development Fundamentals',
+      instructor: 'John Doe',
+      description: 'Learn the basics of Web3 development including Smart Contracts and DApps',
+      price: 100, 
+      thumbnail: '/bootcamp.png',
+    },
     // Add more sample courses here
   ]);
 
@@ -35,11 +43,11 @@ export default function Bootcamp() {
         </div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow w-full"
             >
               {/* Course Thumbnail */}
               <div className="aspect-video bg-gray-700">
