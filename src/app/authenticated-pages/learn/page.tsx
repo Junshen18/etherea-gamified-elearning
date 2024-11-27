@@ -114,7 +114,7 @@ export default function LearnPage() {
             ].map((topic, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedTopic(topic.name)}
+                onClick={() => setSelectedTrack(topic.name)}
                 className={`px-4 py-2 rounded-full border border-cyan-500/30 backdrop-blur-sm
                   ${index === 0
                     ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500'
