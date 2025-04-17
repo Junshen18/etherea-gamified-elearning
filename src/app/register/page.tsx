@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import CustomCursor from "@/components/custom-cursor";
 import { useScramble } from "use-scramble";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import FuturisticInput from "@/components/futuristic-input";
@@ -17,7 +17,23 @@ import { useRouter } from "next/navigation";
 export default function Start() {
   const [count, setCount] = useState(0);
   const router = useRouter();
+  const [userAddress, setUserAddress] = useState<string>("");
 
+  useEffect(() => {
+    // Only run authentication check in browser
+    if (typeof window !== 'undefined') {
+      const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+      // ... rest of your auth logic
+    }
+  }, []);
+
+  useEffect(() => {
+    // Only access localStorage in browser environment
+    if (typeof window !== 'undefined') {
+      const address = localStorage.getItem("user_address") || "";
+      setUserAddress(address);
+    }
+  }, []);
 
   const handleClick = () => {
     setCount(count + 1);
@@ -32,7 +48,6 @@ export default function Start() {
   // const [userName, setUserName] = useState("");
   const [isNotificationOpen, setIsNotificationOpen] = useState(true);
   const [showRewards, setShowRewards] = useState(false);
-  const user_address = localStorage.getItem("user_address");
   const rewardsExample = [
     // { type: "exp" as const, amount: 100 },
     // { type: "coin" as const, amount: 50 },
@@ -184,7 +199,7 @@ export default function Start() {
               <div className="font-bold text-xl">Sage</div>
               <TypeAnimation
                 sequence={[
-                  `Well met, ${user_address}. From this moment, you are a Seeker of Truth and Freedom. I will walk alongside you, teaching, guiding, and answering your questions as we navigate Etherea together.`,
+                  `Well met, ${userAddress}. From this moment, you are a Seeker of Truth and Freedom. I will walk alongside you, teaching, guiding, and answering your questions as we navigate Etherea together.`,
                 ]}
                 wrapper="span"
                 speed={90}

@@ -22,18 +22,27 @@ const LayoutContext = createContext<LayoutContextType>({
 
 export const useLayout = () => useContext(LayoutContext);
 
+const hiddenNavPaths = ["/", "/register", "/login"];
+
+const getIsAuthenticated = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem("isAuthenticated") === "true";
+  }
+  return false;
+};
+
 export function LayoutProvider({ children }: { children: React.ReactNode }) {
   const [showNav, setShowNav] = useState(false);
   const pathname = usePathname();
-  const hiddenNavPaths = ["/", "/register", "/login"];
   const router = useRouter();
+  
   useEffect(() => {
     setShowNav(!hiddenNavPaths.includes(pathname));
   }, [pathname]);
 
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-    if (isAuthenticated === "true" && !hiddenNavPaths.includes(pathname)) {
+    const isAuthenticated = getIsAuthenticated();
+    if (isAuthenticated && !hiddenNavPaths.includes(pathname)) {
       setShowNav(true);
     }
   }, [pathname]);
@@ -61,8 +70,10 @@ export function LayoutProvider({ children }: { children: React.ReactNode }) {
                 // you can get the jwt by calling the getAuthToken helper function
                 const authToken = getAuthToken();
                 console.log('authToken', authToken);
-                localStorage.setItem("isAuthenticated", "true");
-                localStorage.setItem("user_address", args.user.verifiedCredentials[0].address ?? "");
+                if (typeof window !== 'undefined') {
+                  localStorage.setItem("isAuthenticated", "true");
+                  localStorage.setItem("user_address", args.user.verifiedCredentials[0].address ?? "");
+                }
                 if(args.user.newUser == true) {
                   router.push("/register");
                 } else {
@@ -71,7 +82,9 @@ export function LayoutProvider({ children }: { children: React.ReactNode }) {
             },
             onLogout: (args) => {
                 console.log('onLogout was called', args);
-                localStorage.removeItem("isAuthenticated");
+                if (typeof window !== 'undefined') {
+                  localStorage.removeItem("isAuthenticated");
+                }
                 router.push("/");
               }
           },

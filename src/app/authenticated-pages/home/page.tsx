@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from 'react';
@@ -12,12 +13,12 @@ interface TokenBalance {
 }
 
 export default function Home() {
-  const [exp, setExp] = useState<number>(5);
-  const [nextLevelExp, setNextLevelExp] = useState<number>(10);
-  const [level, setLevel] = useState<number>(2);
+  const exp = useState<number>(5)[0];
+  const nextLevelExp = useState<number>(10)[0];
+  const level = useState<number>(2)[0];
   const [isQuestModalOpen, setIsQuestModalOpen] = useState(false);
   const { quests, updateProgress } = useDailyQuests();
-  const [streakCount, setStreakCount] = useState<number>(2);
+  const streakCount = useState<number>(2)[0];
 
   // Temporary mock data
   const tokenBalance: TokenBalance = {

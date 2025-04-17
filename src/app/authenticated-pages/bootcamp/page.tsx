@@ -13,7 +13,7 @@ interface Course {
 }
 
 export default function Bootcamp() {
-  const [courses, setCourses] = useState<Course[]>([
+  const [courses] = useState<Course[]>([
     {
       id: '1',
       title: 'Web3 Development Fundamentals',
@@ -30,7 +30,7 @@ export default function Bootcamp() {
       price: 100, 
       thumbnail: '/bootcamp.png',
     },
-    // Add more sample courses here
+
   ]);
 
   return (

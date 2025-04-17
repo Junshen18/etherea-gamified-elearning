@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
-import BottomNav from '@/components/bottom-nav';
 import { LayoutProvider } from "@/components/layout-provider";
 
 import { config } from '@fortawesome/fontawesome-svg-core'

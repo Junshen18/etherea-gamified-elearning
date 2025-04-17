@@ -1,7 +1,6 @@
 "use client";
 
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaEthereum } from "react-icons/fa";
 import {
   DynamicUserProfile,
@@ -11,20 +10,33 @@ import Image from "next/image";
 import WorldIDVerification from "@/components/WorldIDVerification";
 
 export default function Profile() {
-
   const [isCopied, setIsCopied] = useState(false);
   const { setShowDynamicUserProfile } = useDynamicContext();
-  // Example wallet address - replace with actual user's wallet
-  const walletAddress = localStorage.getItem("user_address") ?? "0x000000000000000000000000000000000000000";
-  const shortAddress = `${walletAddress.slice(0, 6)}...${walletAddress.slice(
-    -4
-  )}`;
+  const [userData, setUserData] = useState<any>(null);
+  const [walletAddress, setWalletAddress] = useState("0x000000000000000000000000000000000000000");
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const data = localStorage.getItem("user_data");
+      const address = localStorage.getItem("user_address");
+      
+      if (data) {
+        setUserData(JSON.parse(data));
+      }
+      if (address) {
+        setWalletAddress(address);
+      }
+    }
+  }, []);
+
+  const shortAddress = `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`;
 
   const copyAddress = () => {
-    navigator.clipboard.writeText(walletAddress);
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-    console.log("Copied to clipboard", isCopied);
+    if (typeof window !== 'undefined') {
+      navigator.clipboard.writeText(walletAddress);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    }
   };
 
   return (

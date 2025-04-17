@@ -8,10 +8,10 @@ interface DailyQuestModalProps {
   isOpen: boolean;
   onClose: () => void;
   quests: DailyQuest[];
-  onUpdateProgress: (questId: string, progress: number) => void;
+  // onUpdateProgress: (questId: string, progress: number) => void;
 }
 
-export function DailyQuestModal({ isOpen, onClose, quests, onUpdateProgress }: DailyQuestModalProps) {
+export function DailyQuestModal({ isOpen, onClose, quests }: DailyQuestModalProps) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
