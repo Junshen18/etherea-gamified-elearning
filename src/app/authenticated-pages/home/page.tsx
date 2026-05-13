@@ -3,8 +3,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { DailyQuestModal } from '@/components/DailyQuestModal';
-import { useDailyQuests } from '@/components/daily-quests';
+import { DailyQuestModal } from '../../../components/DailyQuestModal';
+import { useDailyQuests } from '../../../components/daily-quests';
 
 
 interface TokenBalance {

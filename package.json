@@ -42,15 +42,15 @@
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "use-scramble": "^2.2.15",
-    "viem": "^2.21.45"
+    "viem": "^2.21.45",
+    "tailwindcss": "^3.4.15",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.21"
   },
   "devDependencies": {
     "@types/node": "^20.17.8",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   }
 }
